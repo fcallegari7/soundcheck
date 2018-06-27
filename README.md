@@ -1,2 +1,2 @@
 # soundcheck
-Website with html, css and javascript.
+Website with html and css.
