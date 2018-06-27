@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sound Check</title>
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="https://use.fontawesome.com/fd2b2f5ec9.js"></script>
+	<script>
+
+//Code for the slideshow gotten from w3schools.com - url: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+
+window.addEventListener("load", start, false);
+
+</script>
+</head>
+<body>
+	<header>
+
+	<div>	
+		<img src="../images/logo.png" alt="logo">
+			<h1 id="tes"><a href="home.html">SOUND CHECK</a></h1>
+	</div>
+
+		<video autoplay loop>
+  			<source src="../images/header.mp4" type="video/mp4">
+  		</video>
+
+  		<nav>
+			<form method="post" action="#"> 
+				<label for="searchbar" class="visuallyhidden">search bar:</label>		  	 
+				<input type="text" name="searchbar" id="searchbar" placeholder="Search" class="show">
+				<label for="submit" class="visuallyhidden">Button for search inside the website</label>
+				<button type="submit" id="submit"><i class="fa fa-search" aria-hidden="true"></i></button>	 
+			</form> 
+		
+			<ul class="menu">
+				<li><a href="article.html">NEWS</a></li>
+				<li><a href="#">VIDEO</a></li>
+				<li><a href="#">MUSIC</a></li>
+				<li><a href="#">EVENTS</a></li>
+				<li><a href="source.html">SOURCE</a></li>
+			</ul>
+		</nav>
+	</header>
+
+<main>
+	<div class="wrapper">
+		<div class="top">
+			<div class="left">
+
+		<section>
+			<h2 class="visuallyhidden">News</h2>
+			<article class="featured">
+				<a href="article.html">
+				<img src="../images/featured.jpeg" alt="music event">
+				<div class="positioned">
+					<h3>NEWS</h3>
+					<h2>Coldplay A Head Full of Dreams Tour 2017 ends in Buenos Aires</h2>
+					<h4>Fabio Callegari</h4>
+				</div>
+				</a>
+			</article>
+
+			<article class="other">
+				<img src="../images/other.jpeg" alt="a man with headphones">
+				<div class="position">
+					<h3>NEWS</h3>
+					<h2>The Killers new 'Wonderful Wonderful' album is wonderful</h2>
+					<h4>Fabio Callegari</h4>
+				</div>
+			</article>
+
+			<article class="other">
+				<img src="../images/another.jpeg" alt="vinyl disc">
+				<div class="position">
+					<h3>NEWS</h3>
+					<h2>'Wall of Glass' is Liam Gallager's first album solo after Oasis</h2>
+					<h4>Fabio Callegari</h4>
+				</div>
+			</article>
+		</section>
+
+		</div>
+
+		<div class="right">
+		<section>
+			<div class="hits">
+				<h2 class="title"><i class="fa fa-fire" aria-hidden="true"></i> Hits</h2>
+				<div>
+					<img src="../images/hit1.jpeg" alt="a man playing the guitar">
+					<h3>Castle on the Hill <br> <span>Ed Sheeran</span> </h3>
+				</div>
+				<div>
+					<img src="../images/hit2.jpeg" alt="music event">
+					<h3>Up&Up <br> <span>Coldplay</span></h3>
+				</div>
+				<div>
+					<img src="../images/hit3.jpeg" alt="electric guitar">
+					<h3>Best Fake Smile <br> <span>James Bay</span></h3>
+				</div>
+				<div>
+					<img src="../images/hit4.jpeg" alt="a man playing the bluegrass">
+					<h3>Helpless <br> <span>John Mayer</span></h3>
+				</div>
+				<div>
+					<img src="../images/hit5.jpeg" alt="a singer in a show">
+					<h3>Thunder <br> <span>Imagine Dragons</span></h3>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2 class="title">Video</h2>
+			<div class="youtube">
+				<iframe src="https://www.youtube.com/embed/mdRytnE5EcE" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</section>
+	</div>
+</div>
+
+		<section>
+			<div class="events">
+				<h2 class="title"><i class="fa fa-calendar-o" aria-hidden="true"></i> Upcoming Events</h2>
+				<div>
+					<img class="mySlides" src="../images/event1.jpeg" style="display:block;" alt="music event">
+					<img class="mySlides" src="../images/event2.jpeg" style="display:none;" alt="music event">
+					<img class="mySlides" src="../images/event3.jpeg" style="display:none;" alt="some bass in a wall">
+					<button class="buttonleft" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="buttonright" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
+<footer>
+	<nav>
+		<ul class="social">
+			<li><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+			<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+			<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+		</ul>
+
+		<ul class="contact">
+			<li><a href="#">Advertise</a></li>
+			<li><a href="contact.html">Contact us</a></li>
+			<li><a href="#">About</a></li>
+		</ul>
+	</nav>
+</footer>
+</body>
+</html>
